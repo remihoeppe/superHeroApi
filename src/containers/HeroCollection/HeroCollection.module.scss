@@ -1,0 +1,13 @@
+.HeroCollection {
+    &__Search {
+        display: flex;
+        justify-content: space-around;
+        width: 30vw;
+    }
+
+    &__HeroGrid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

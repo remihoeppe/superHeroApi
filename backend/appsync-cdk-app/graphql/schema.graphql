@@ -1,0 +1,50 @@
+type Hero {
+    id: String
+    name: String
+    img: String
+    combat: Int
+    durability: Int
+    intelligence: Int
+    power: Int
+    speed: Int
+    strength: Int
+}
+
+input HeroInput {
+    id: String
+    name: String
+    img: String
+    combat: Int
+    durability: Int
+    intelligence: Int
+    power: Int
+    speed: Int
+    strength: Int
+}
+
+input DeleteHeroInput {
+    heroId: String
+}
+
+type Response {
+    success: Boolean!
+    message: String
+}
+
+type Mutation {
+    createHero(hero: HeroInput): Hero
+    updateHero(hero: HeroInput): Hero
+    deleteHero(heroId: String!): Hero
+}
+
+type Query {
+    getHeroByName(name: String!): Hero
+    getHeroById(id: String!): Hero
+    listHeros: [Hero]
+}
+
+type Subscription {
+    onCreateHero: Hero @aws_subscribe(mutations: ["createHero"])
+    onDeleteHero: Hero @aws_subscribe(mutations: ["deleteHero"])
+    onUpdateHero: Hero @aws_subscribe(mutations: ["updateHero"])
+}

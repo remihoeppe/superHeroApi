@@ -1,0 +1,15 @@
+.SearchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // width: 40%;
+
+    &__Input {
+        height: 40%;
+    }
+
+    &__Btn {
+        height: 40%;
+        margin-left: 20px;
+    }
+}

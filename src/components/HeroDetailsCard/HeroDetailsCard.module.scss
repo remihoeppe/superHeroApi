@@ -1,0 +1,43 @@
+.HeroDetailsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__HeroInfo {
+        display: flex;
+        justify-content: space-between;
+
+        &_Text {
+            margin-left: 30px;
+            border: 3px solid greenyellow;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_Inputs {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_Stats {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            ul {
+                list-style: none;
+            }
+        }
+
+        &_Img {
+            max-height: 500px;
+        }
+
+        &_AddBtn {
+            margin: 10px;
+        }
+    }
+}

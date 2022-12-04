@@ -1,0 +1,27 @@
+.HeroCardCollection {
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    border: 3px solid greenyellow;
+    border-radius: 10px;
+    text-align: center;
+
+    &__Img {
+        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+    }
+
+    &__Stats {
+        h3 {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+    }
+}

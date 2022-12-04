@@ -1,0 +1,55 @@
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+type Hero {
+  combat: Int
+  durability: Int
+  id: String
+  img: String
+  intelligence: Int
+  name: String
+  power: Int
+  speed: Int
+  strength: Int
+}
+
+type Mutation {
+  createHero(info: HeroInput): Hero
+  deleteHero(id: DeleteHeroInput): Response
+  updateHero(updateData: HeroInput): Hero
+}
+
+type Query {
+  getHeroById(id: String!): Hero
+  getHeroByName(name: String!): Hero
+  listHeros: [Hero]
+}
+
+type Response {
+  message: String
+  success: Boolean!
+}
+
+type Subscription {
+  onCreateHero: Hero @aws_subscribe(mutations : ["createHero"])
+  onDeleteHero: Response @aws_subscribe(mutations : ["deleteHero"])
+  onUpdateHero: Hero @aws_subscribe(mutations : ["updateHero"])
+}
+
+input DeleteHeroInput {
+  id: String
+}
+
+input HeroInput {
+  combat: Int
+  durability: Int
+  img: String
+  intelligence: Int
+  name: String
+  power: Int
+  speed: Int
+  strength: Int
+}
