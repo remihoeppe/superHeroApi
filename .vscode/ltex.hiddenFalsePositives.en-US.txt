@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThe Live Version of this project can be seen here SuperHeroAPI\\E$"}

@@ -1,5 +1,8 @@
 # Viva Lab Tech Test
 
+The Live Version of this project can be seen here
+[SuperHeroAPI](https://main.d2r2qa943hw608.amplifyapp.com/)
+
 ## The Task At Hand
 
 You are charged to create a basic application for a superhero enthusiast, that can perform following functions:
@@ -22,10 +25,12 @@ I used this API as the source for the original data: https://akabab.github.io/su
 
 ### Front-End
 
-```bash
-npm install
-npm run dev
-```
+The Front-End was deployed on AWS Amplify through the GUI. The GitHub repository was connected to AWS Amplify web hosting and deployed to an Amplify CDN.
+
+If you want to run this application locally you can also follow the below instruction:
+
+`npm install`
+`npm run dev`
 
 Vite will display which port to access on your localhost
 (e.g. http://localhost:5173/)
@@ -33,6 +38,10 @@ Vite will display which port to access on your localhost
 ### Back-End
 
 The backend is already deployed on AWS, so no install is required. The code is in the Back-End directory
+
+To deploy this API on the AWS AppSync service you can follow the steps below
+
+`npm run build && cdk deploy`
 
 ## Assumptions
 
