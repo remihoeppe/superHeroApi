@@ -1,4 +1,4 @@
-# Viva Lab Tech Test
+# SuperHero Api
 
 The Live Version of this project can be seen here
 [SuperHeroAPI](https://main.d2r2qa943hw608.amplifyapp.com/)
